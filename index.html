@@ -1,21 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery template</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>bussiness card</title>
+  <style>
+      div{
+          border: 15px solid black;
+          border-style: double;
+          height:300px;
+          background-color: white;
+          
+      }
+    h2{
+      text-align:center;
+      font-size: 40px
+    }
+  </style>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function(){
+      
+      $('button').click(function(){
+          
+          
+        var company = $("#company").val()
+        var name =$("#name").val()
+        var address=$("#address").val()
+        var phone=$("#phone").val()
+        var email =$("#email").val()
+        var favcolor = $("#Favorite").val()
+        $('div').css('background-color', favcolor);
+        $('h1').html(company);
+        $('h2').html(name);
+        $('h3').html(address);
+        $('h4').html(phone);
+        $('h5').html(email);
+        
+        
+        
+        
+        
     
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-    <script>
-        $(function(){
-            //code here
-            
-        });
-    </script>
-  </head>
-  <body>
+      });
+      
+    });
+  </script>
+</head>
+<body>
   
-  </body>
+  Company name: <input id="company"><br>
+ Your name: <input id="name"><br>
+  Address: <input id="address"><br>
+  Phone: <input id="phone"><br>
+  Email: <input id="email"><br>
+  Favorite color: <input id="Favorite"><br>
+    <button>Generate bussiness card!</button>
+  
+  <div>
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+  </div>
+  
+</body>
 </html>
